@@ -6,24 +6,20 @@ synonyms:
   - Contract Master
   - Agreement Dimension
 related_entities:
-  - ../entities/contract.md
+  - contract
 ---
 
 # Contract Dimension
 
 ## Business Definition
-
-Contract and entitlement context for support and subscription analysis.
+Contract dimension representing service, support, or subscription agreement context associated with bookings.
 
 ## Technical Mapping
-
 `dim_contract`
 
 ## Synonyms
-
 - Contract Master
 - Agreement Dimension
 
 ## Related Entities
-
 - [Contract](../entities/contract.md)
