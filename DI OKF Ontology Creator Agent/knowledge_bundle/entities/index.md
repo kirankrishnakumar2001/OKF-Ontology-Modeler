@@ -1,9 +1,9 @@
 ---
-title: Entity Index
-section: entities
+title: Entities Index
+concept_type: entity_index
 ---
 
-# Entities
+# Entities Index
 
 - [Booking Transaction](booking-transaction.md)
 - [Customer](customer.md)
