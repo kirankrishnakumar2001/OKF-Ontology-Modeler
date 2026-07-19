@@ -6,24 +6,20 @@ synonyms:
   - Bookings Fact
   - Booking Events
 related_entities:
-  - ../entities/booking-transaction.md
+  - booking-transaction
 ---
 
 # Booking Transaction Fact
 
 ## Business Definition
-
-Central fact structure capturing booking transactions at order-line grain.
+Central fact table representing booking transactions at order-line grain for Cisco bookings analytics.
 
 ## Technical Mapping
-
 `fact_bookings`
 
 ## Synonyms
-
 - Bookings Fact
 - Booking Events
 
 ## Related Entities
-
 - [Booking Transaction](../entities/booking-transaction.md)
