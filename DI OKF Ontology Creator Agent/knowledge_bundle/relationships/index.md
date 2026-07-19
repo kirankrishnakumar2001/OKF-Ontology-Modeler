@@ -1,9 +1,9 @@
 ---
-title: Relationship Index
-section: relationships
+title: Relationships Index
+concept_type: relationship_index
 ---
 
-# Relationships
+# Relationships Index
 
 - [Date to Booking Transaction](date-to-booking-transaction.md)
 - [Customer to Booking Transaction](customer-to-booking-transaction.md)
