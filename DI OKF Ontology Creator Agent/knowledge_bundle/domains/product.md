@@ -1,15 +1,20 @@
 ---
 title: Product
-concept_type: domain
-slug: product
+concept_type: business_domain
+version: 1.0
+status: generated
 related_entities:
-  - product
+  - ../entities/product.md
+related_measures: []
+related_relationships:
+  - ../relationships/product-to-booking-transaction.md
+  - ../relationships/product-to-contract-applicability.md
 ---
 
 # Product
 
 ## Description
-Business domain describing Cisco products, offers, product families, technology domains, and business entities.
+Product and offer master context across families and technology areas.
 
 ## Business Purpose
 Analyze portfolio mix, offer types, and business entity performance.
@@ -20,10 +25,7 @@ Analyze portfolio mix, offer types, and business entity performance.
 
 ## Related Measures
 
-- [Booking Amount USD](../measures/booking-amount-usd.md)
-- [Annual Contract Value USD](../measures/annual-contract-value-usd.md)
-- [Total Contract Value USD](../measures/total-contract-value-usd.md)
-- [Quantity Sold](../measures/quantity-sold.md)
+No domain-specific base measures are defined directly in this dimension domain.
 
 ## Related Relationships
 
