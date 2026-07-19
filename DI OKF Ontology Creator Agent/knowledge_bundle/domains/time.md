@@ -1,22 +1,18 @@
 ---
 title: Time
 concept_type: domain
+slug: time
 related_entities:
-  - ../entities/date.md
-related_measures: []
-related_relationships:
-  - ../relationships/date-to-booking-transaction.md
+  - date
 ---
 
 # Time
 
 ## Description
-
 Business domain describing calendar and fiscal reporting attributes.
 
 ## Business Purpose
-
-This domain enables time-based reporting, fiscal rollups, period trending, and consistent date slicing across bookings analysis.
+Enable time-based reporting and fiscal rollups.
 
 ## Related Entities
 
@@ -24,7 +20,10 @@ This domain enables time-based reporting, fiscal rollups, period trending, and c
 
 ## Related Measures
 
-- None explicit in this domain.
+- [Booking Amount USD](../measures/booking-amount-usd.md)
+- [Annual Contract Value USD](../measures/annual-contract-value-usd.md)
+- [Total Contract Value USD](../measures/total-contract-value-usd.md)
+- [Quantity Sold](../measures/quantity-sold.md)
 
 ## Related Relationships
 
