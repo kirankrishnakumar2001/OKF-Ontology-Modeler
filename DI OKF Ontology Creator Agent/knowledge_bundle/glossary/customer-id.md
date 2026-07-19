@@ -6,24 +6,20 @@ synonyms:
   - Account ID
   - Customer Number
 related_entities:
-  - ../entities/customer.md
+  - customer
 ---
 
 # Customer ID
 
 ## Business Definition
-
 Business identifier assigned to a customer account.
 
 ## Technical Mapping
-
 `dim_customer.customer_id`
 
 ## Synonyms
-
 - Account ID
 - Customer Number
 
 ## Related Entities
-
 - [Customer](../entities/customer.md)
