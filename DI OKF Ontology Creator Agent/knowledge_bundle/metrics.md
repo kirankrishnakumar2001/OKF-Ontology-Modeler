@@ -1,7 +1,6 @@
 ---
 title: Semantic Metrics
-subject_area: Cisco Sales Bookings and Revenue Analytics
-status: validated-with-warnings
+concept_type: metrics
 ---
 
 # Semantic Metrics
@@ -10,41 +9,37 @@ status: validated-with-warnings
 
 | Metric | Value |
 | --- | --- |
-| Total Domains | 8 |
-| Total Entities | 8 |
+| Total Tables / Entities | 8 |
+| Total Columns / Attributes | 61 |
 | Total Relationships | 9 |
+| Total Domains | 8 |
 | Total Measures | 6 |
-| Total Glossary Terms | 53 |
-| Explicit Relationships | 7 |
-| Inferred Relationships | 2 |
-| Validation Status | Validated with warnings |
+| Total Glossary Terms | 69 |
+| Mapped Terms | 69 |
+| Glossary Coverage Percentage | 100.00% |
 
 ## Per-Domain Metrics
 
-| Domain Name | Entity Count | Measure Count | Related Relationships | Domain Status |
-| --- | --- | --- | --- | --- |
-| Sales Bookings | 1 | 6 | 7 explicit | Structurally complete; data unavailable |
-| Customer | 1 | 0 | 1 explicit, 1 inferred | Structurally complete; data unavailable |
-| Product | 1 | 0 | 1 explicit, 1 inferred | Structurally complete; data unavailable |
-| Partner / Channel | 1 | 0 | 1 explicit | Structurally complete; data unavailable |
-| Geography | 1 | 0 | 1 explicit, 1 inferred | Structurally complete; data unavailable |
-| Sales Organization | 1 | 0 | 1 explicit | Structurally complete; data unavailable |
-| Contract | 1 | 0 | 1 explicit, 1 inferred | Structurally complete; data unavailable |
-| Time | 1 | 0 | 1 explicit | Structurally complete; data unavailable |
+| Domain Name | Entity Count | Attribute Count | Measure Count | Glossary Coverage Percentage | Domain Status |
+| --- | --- | --- | --- | --- | --- |
+| Sales Bookings | 1 | 12 | 6 | 100.00% | Structurally complete; data unavailable |
+| Customer | 1 | 6 | 0 | 100.00% | Structurally complete; data unavailable |
+| Product | 1 | 6 | 0 | 100.00% | Structurally complete; data unavailable |
+| Partner / Channel | 1 | 5 | 0 | 100.00% | Structurally complete; data unavailable |
+| Geography | 1 | 3 | 0 | 100.00% | Structurally complete; data unavailable |
+| Sales Organization | 1 | 5 | 0 | 100.00% | Structurally complete; data unavailable |
+| Contract | 1 | 4 | 0 | 100.00% | Structurally complete; data unavailable |
+| Time | 1 | 6 | 0 | 100.00% | Structurally complete; data unavailable |
 
-## Measure Inventory
+## Quality Warnings
 
-| Measure | Aggregation Type | Related Entity | Related Domain |
-| --- | --- | --- | --- |
-| Quantity Sold | Sum | [Booking Transaction](entities/booking-transaction.md) | [Sales Bookings](domains/sales-bookings.md) |
-| Unit List Price USD | Sum, Avg | [Booking Transaction](entities/booking-transaction.md) | [Sales Bookings](domains/sales-bookings.md) |
-| Discount Percentage | Avg | [Booking Transaction](entities/booking-transaction.md) | [Sales Bookings](domains/sales-bookings.md) |
-| Booking Amount USD | Sum | [Booking Transaction](entities/booking-transaction.md) | [Sales Bookings](domains/sales-bookings.md) |
-| Annual Contract Value USD | Sum | [Booking Transaction](entities/booking-transaction.md) | [Sales Bookings](domains/sales-bookings.md) |
-| Total Contract Value USD | Sum | [Booking Transaction](entities/booking-transaction.md) | [Sales Bookings](domains/sales-bookings.md) |
+- All source tables were reported as empty in the upstream semantic summary, so empirical data validation is limited.
+- Some glossary mappings and semantic associations remain inference-based where source comments or row values were unavailable.
 
-## Validation Warnings
+## Cross-Links
 
-- Source-system row counts were reported as zero, so data-quality and value-domain profiling could not be completed.
-- `booking_type`, `is_renewal`, `auto_renew_flag`, and some contextual associations remain partially inferred.
-- Inferred relationships are documented separately from explicit dimensional foreign-key relationships.
+- [Knowledge Bundle Index](index.md)
+- [Semantic Summary](semantic_summary.md)
+- [Domains](domains/index.md)
+- [Entities](entities/index.md)
+- [Measures](measures/index.md)
