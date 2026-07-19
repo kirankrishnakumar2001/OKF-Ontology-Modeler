@@ -1,23 +1,18 @@
 ---
 title: Customer
 concept_type: domain
+slug: customer
 related_entities:
-  - ../entities/customer.md
-related_measures: []
-related_relationships:
-  - ../relationships/customer-to-booking-transaction.md
-  - ../relationships/customer-headquarters-to-geography.md
+  - customer
 ---
 
 # Customer
 
 ## Description
-
 Business domain describing customer accounts, segmentation, industry, and headquarters geography.
 
 ## Business Purpose
-
-This domain supports analysis of bookings by account, segment, industry, account tier, and headquarters context. It provides the customer-account perspective used by sales and revenue operations.
+Analyze bookings by account, segment, industry, and headquarters geography.
 
 ## Related Entities
 
@@ -25,7 +20,10 @@ This domain supports analysis of bookings by account, segment, industry, account
 
 ## Related Measures
 
-- None explicit in this domain.
+- [Booking Amount USD](../measures/booking-amount-usd.md)
+- [Annual Contract Value USD](../measures/annual-contract-value-usd.md)
+- [Total Contract Value USD](../measures/total-contract-value-usd.md)
+- [Quantity Sold](../measures/quantity-sold.md)
 
 ## Related Relationships
 
