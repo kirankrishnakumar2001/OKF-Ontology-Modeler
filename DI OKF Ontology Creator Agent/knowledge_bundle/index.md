@@ -1,36 +1,17 @@
 ---
 title: Cisco Bookings OKF Knowledge Bundle
 concept_type: knowledge_bundle_index
-domains:
-  - sales-bookings
-  - customer
-  - product
-  - partner-channel
-  - geography
-  - sales-organization
-  - contract
-  - time
-entities:
-  - booking-transaction
-  - customer
-  - product
-  - partner
-  - geography
-  - sales-representative
-  - contract
-  - date
-measures:
-  - quantity-sold
-  - unit-list-price-usd
-  - discount-percentage
-  - booking-amount-usd
-  - annual-contract-value-usd
-  - total-contract-value-usd
+subject_area: Cisco Sales Bookings and Revenue Analytics
+version: 1.0
+status: generated
+source_documents:
+  - DI OSI Semantic Creator Agent Output.txt
+  - Cisco_Bookings_Data_Model_and_Process.docx
 ---
 
 # Cisco Bookings OKF Knowledge Bundle
 
-This Open Knowledge Format knowledge bundle captures the Cisco Sales Bookings and Revenue Analytics semantic model derived from the validated OSI semantic model and enriched by the Cisco quote-to-booking business process document.
+This Open Knowledge Format (OKF) knowledge bundle organizes the validated Cisco bookings semantic model into reusable domain, entity, relationship, measure, and glossary concept documents.
 
 ## Navigation
 
@@ -42,15 +23,15 @@ This Open Knowledge Format knowledge bundle captures the Cisco Sales Bookings an
 - [Measures](measures/index.md)
 - [Glossary](glossary/index.md)
 
-## Business Context
+## Bundle Scope
 
-The model represents a star-schema analytical foundation centered on booking transactions at order-line grain. It supports governed analysis of bookings, ACV, TCV, quantity, discounting, customer segmentation, product mix, partner contribution, geography, sales ownership, contract context, and fiscal reporting.
+The bundle represents a star-schema analytical model for Cisco booking transactions at order-line grain with conformed dimensions for customer, product, partner, geography, sales representative, contract, and date.
 
 ## Validation Notes
 
 - OSI Semantic Model readability: Pass
-- Business Process document readability: Pass
+- Business process document readability: Pass
 - Duplicate entities: None detected
 - Duplicate domains: None detected
-- Missing relationships: No missing explicit fact-to-dimension relationships detected
-- Warnings: inferred semantic associations remain confidence-scored and separate from explicit foreign-key relationships
+- Missing explicit foreign-key relationships: None detected
+- Warnings: semantic associations such as Customer Headquarters to Geography and Product to Contract Applicability are inferred and confidence-scored; row-level data validation is not possible because all tables are empty.
