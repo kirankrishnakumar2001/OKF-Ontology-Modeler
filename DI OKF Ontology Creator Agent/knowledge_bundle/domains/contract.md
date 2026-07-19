@@ -1,15 +1,20 @@
 ---
 title: Contract
-concept_type: domain
-slug: contract
+concept_type: business_domain
+version: 1.0
+status: generated
 related_entities:
-  - contract
+  - ../entities/contract.md
+related_measures: []
+related_relationships:
+  - ../relationships/contract-to-booking-transaction.md
+  - ../relationships/product-to-contract-applicability.md
 ---
 
 # Contract
 
 ## Description
-Business domain describing service, support, or subscription contract context tied to bookings.
+Contract and entitlement context for support and subscription analysis.
 
 ## Business Purpose
 Analyze term, coverage, renewal behavior, ACV, and TCV relationships.
@@ -20,9 +25,7 @@ Analyze term, coverage, renewal behavior, ACV, and TCV relationships.
 
 ## Related Measures
 
-- [Annual Contract Value USD](../measures/annual-contract-value-usd.md)
-- [Total Contract Value USD](../measures/total-contract-value-usd.md)
-- [Booking Amount USD](../measures/booking-amount-usd.md)
+No domain-specific base measures are defined directly in this dimension domain.
 
 ## Related Relationships
 
