@@ -1,15 +1,19 @@
 ---
 title: Sales Organization
-concept_type: domain
-slug: sales-organization
+concept_type: business_domain
+version: 1.0
+status: generated
 related_entities:
-  - sales-representative
+  - ../entities/sales-representative.md
+related_measures: []
+related_relationships:
+  - ../relationships/sales-representative-to-booking-transaction.md
 ---
 
 # Sales Organization
 
 ## Description
-Business domain describing sales representatives, roles, teams, and market coverage.
+Sales ownership and coverage context.
 
 ## Business Purpose
 Analyze bookings by sales representative, role, team, and segment coverage.
@@ -20,9 +24,7 @@ Analyze bookings by sales representative, role, team, and segment coverage.
 
 ## Related Measures
 
-- [Booking Amount USD](../measures/booking-amount-usd.md)
-- [Quantity Sold](../measures/quantity-sold.md)
-- [Discount Percentage](../measures/discount-percentage.md)
+No domain-specific base measures are defined directly in this dimension domain.
 
 ## Related Relationships
 
