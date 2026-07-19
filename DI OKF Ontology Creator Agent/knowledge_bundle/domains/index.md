@@ -1,9 +1,9 @@
 ---
-title: Domain Index
-section: domains
+title: Domains Index
+concept_type: domain_index
 ---
 
-# Domains
+# Domains Index
 
 - [Sales Bookings](sales-bookings.md)
 - [Customer](customer.md)
