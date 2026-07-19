@@ -1,32 +1,28 @@
 ---
 title: Geography
 concept_type: entity
+business_domain: geography
 technical_mapping: dim_geography
-domain: ../domains/geography.md
-relationships:
-  - ../relationships/geography-to-booking-transaction.md
-  - ../relationships/customer-headquarters-to-geography.md
+keys:
+  primary_key: geography_key
 ---
 
 # Geography
 
 ## Business Definition
-
-Geography entity representing sales geography hierarchy across region, theater, and country for reporting and rollups.
+Geography dimension representing the sales geography hierarchy used for regional performance reporting.
 
 ## Technical Mapping
-
 - Table: `dim_geography`
-- Entity Type: Dimension
 - Primary Key: `geography_key`
 
 ## Attributes
 
-| Attribute | Technical Column | Business Meaning |
+| Attribute | Technical Column | Definition |
 | --- | --- | --- |
-| Geography Key | `geography_key` | Surrogate key uniquely identifying a geography record. |
-| Region | `region` | Broad sales region associated with the record. |
-| Theater | `theater` | Intermediate geography grouping used within sales structures. |
+| Geography Key | `geography_key` | Surrogate key that uniquely identifies a geography record. |
+| Region | `region` | Broad sales region associated with the booking or sales coverage model. |
+| Theater | `theater` | Intermediate geography grouping used within Cisco sales organization structures. |
 | Country | `country` | Country associated with the geography record. |
 
 ## Keys
@@ -35,7 +31,7 @@ Geography entity representing sales geography hierarchy across region, theater, 
 
 ## Measures
 
-- None explicit.
+This entity does not contain explicit stored measures. It contextualizes [Booking Amount USD](../measures/booking-amount-usd.md), [Quantity Sold](../measures/quantity-sold.md), and [Annual Contract Value USD](../measures/annual-contract-value-usd.md).
 
 ## Relationships
 
@@ -44,6 +40,6 @@ Geography entity representing sales geography hierarchy across region, theater, 
 
 ## Related Concepts
 
-- Domain: [Geography](../domains/geography.md)
-- Related fact entity: [Booking Transaction](booking-transaction.md)
-- Related customer context: [Customer](customer.md)
+- [Geography Domain](../domains/geography.md)
+- [Booking Transaction](booking-transaction.md)
+- [Customer](customer.md)
