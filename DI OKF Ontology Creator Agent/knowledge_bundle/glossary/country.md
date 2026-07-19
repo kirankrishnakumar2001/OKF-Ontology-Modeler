@@ -5,23 +5,19 @@ technical_mapping: dim_geography.country
 synonyms:
   - Nation
 related_entities:
-  - ../entities/geography.md
+  - geography
 ---
 
 # Country
 
 ## Business Definition
-
 Country associated with the geography record.
 
 ## Technical Mapping
-
 `dim_geography.country`
 
 ## Synonyms
-
 - Nation
 
 ## Related Entities
-
 - [Geography](../entities/geography.md)
