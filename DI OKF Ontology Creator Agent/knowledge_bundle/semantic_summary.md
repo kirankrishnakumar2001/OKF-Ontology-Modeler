@@ -1,7 +1,7 @@
 ---
 title: Semantic Summary
-subject_area: Cisco Sales Bookings and Revenue Analytics
-status: validated-with-warnings
+concept_type: semantic_summary
+business_subject_area: Cisco Sales Bookings and Revenue Analytics
 source_documents:
   - DI OSI Semantic Creator Agent Output.txt
   - Cisco_Bookings_Data_Model_and_Process.docx
@@ -25,15 +25,16 @@ source_documents:
 
 | Validation Check | Status | Details |
 | --- | --- | --- |
-| OSI Semantic Model readability | Pass | Source semantic model content was readable from `DI OSI Semantic Creator Agent Output.txt`. |
+| OSI Semantic Model readability | Pass | The OSI semantic model output was readable and structurally complete. |
 | Business Process document readability | Pass | `Cisco_Bookings_Data_Model_and_Process.docx` was readable. |
-| Required semantic sections present | Pass | Domains, entities, relationships, measures, glossary mapping, metrics, and validation were present. |
+| Required semantic sections present | Pass | Domains, entities, relationships, measures, glossary mapping, summary, metrics, and validation were present in the source model. |
 | Duplicate entities | Pass | No duplicate entities detected. |
 | Duplicate domains | Pass | No duplicate domains detected. |
-| Missing relationships | Warning | Explicit FK relationships are complete; two additional semantic associations are inferred rather than physically modeled. |
-| Data-backed validation | Warning | Source tables were reported as empty, limiting empirical validation of domains, values, and metrics. |
+| Missing relationships | Pass | All seven explicit fact-to-dimension relationships are present. |
+| Validation warning | Warning | Two semantic associations are inferred rather than physically modeled: Customer Headquarters to Geography and Product to Contract Applicability. |
+| Validation warning | Warning | Source data rows are unavailable, so value-domain and empirical semantic validation cannot be performed. |
 
-## Extracted Business Domains
+## Domain Summary
 
 - [Sales Bookings](domains/sales-bookings.md)
 - [Customer](domains/customer.md)
@@ -44,7 +45,7 @@ source_documents:
 - [Contract](domains/contract.md)
 - [Time](domains/time.md)
 
-## Extracted Business Entities
+## Entity Summary
 
 - [Booking Transaction](entities/booking-transaction.md)
 - [Customer](entities/customer.md)
@@ -55,7 +56,7 @@ source_documents:
 - [Contract](entities/contract.md)
 - [Date](entities/date.md)
 
-## Extracted Relationships
+## Relationship Summary
 
 - [Date to Booking Transaction](relationships/date-to-booking-transaction.md)
 - [Customer to Booking Transaction](relationships/customer-to-booking-transaction.md)
@@ -67,7 +68,7 @@ source_documents:
 - [Customer Headquarters to Geography](relationships/customer-headquarters-to-geography.md)
 - [Product to Contract Applicability](relationships/product-to-contract-applicability.md)
 
-## Extracted Measures
+## Measure Summary
 
 - [Quantity Sold](measures/quantity-sold.md)
 - [Unit List Price USD](measures/unit-list-price-usd.md)
@@ -76,22 +77,16 @@ source_documents:
 - [Annual Contract Value USD](measures/annual-contract-value-usd.md)
 - [Total Contract Value USD](measures/total-contract-value-usd.md)
 
-## Knowledge Extraction Notes
+## Glossary Summary
 
-The business process document enriches the semantic model by clarifying:
+See [Glossary Index](glossary/index.md) for all glossary concepts.
 
-- quote-to-booking process boundaries
-- booking recognition timing
-- distinction between bookings, billings, and revenue
-- role ownership across Sales, Deal Desk, Revenue Operations, Channel/Partner Org, Customer Experience, and Finance
-- KPI interpretation for bookings, renewal mix, ACV, TCV, attach rate, product-family mix, and partner contribution
-
-## Bundle Validation Summary
+## Knowledge Bundle Validation
 
 | Validation Check | Status | Details |
 | --- | --- | --- |
-| Missing concept documents | Pass | All extracted domains, entities, relationships, measures, and glossary terms were generated as concept documents. |
-| Missing YAML frontmatter | Pass | All generated Markdown documents include YAML frontmatter. |
-| Broken semantic links | Pass | Internal semantic links were generated consistently using relative paths. |
-| Duplicate concept documents | Pass | No duplicate concept documents were generated. |
-| Missing references | Warning | Some inferred concepts reference business-process semantics rather than explicit modeled foreign keys. |
+| Missing concept documents | Pass | This bundle includes domain, entity, relationship, measure, and glossary indexes and concept documents. |
+| Missing YAML frontmatter | Pass | All generated documents include YAML frontmatter. |
+| Broken semantic links | Pass | All links in this bundle target generated documents. |
+| Duplicate concept documents | Pass | No duplicate concept documents generated. |
+| Missing references | Pass | Core semantic references are present across linked concepts. |
