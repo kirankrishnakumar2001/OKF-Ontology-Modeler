@@ -1,31 +1,28 @@
 ---
 title: Partner to Booking Transaction
 concept_type: relationship
-source_entity: ../entities/partner.md
-target_entity: ../entities/booking-transaction.md
-relationship_type: dimensional foreign key
-cardinality: One-to-Many
-confidence_score: 1.00
+source_entity: partner
+target_entity: booking-transaction
+relationship_type: dimensional_foreign_key
+cardinality: one-to-many
 ---
 
 # Partner to Booking Transaction
 
 ## Source Entity
-
 - [Partner](../entities/partner.md)
 
 ## Target Entity
-
 - [Booking Transaction](../entities/booking-transaction.md)
 
 ## Relationship Type
-
 Dimensional foreign key
 
 ## Cardinality
-
-One partner to many booking transactions.
+One Partner to many Booking Transactions
 
 ## Business Description
+Each booking transaction may be associated with a partner organization, supporting route-to-market and channel performance analysis.
 
-Each booking transaction may reference a partner through `fact_bookings.partner_key -> dim_partner.partner_key`, enabling channel, partner, and route-to-market performance analysis.
+## Technical Basis
+`fact_bookings.partner_key -> dim_partner.partner_key`
