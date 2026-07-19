@@ -1,10 +1,17 @@
 ---
 title: Semantic Summary
 concept_type: semantic_summary
-business_subject_area: Cisco Sales Bookings and Revenue Analytics
-source_documents:
-  - DI OSI Semantic Creator Agent Output.txt
-  - Cisco_Bookings_Data_Model_and_Process.docx
+subject_area: Cisco Sales Bookings and Revenue Analytics
+version: 1.0
+status: generated
+related_concepts:
+  - ./index.md
+  - ./metrics.md
+  - ./domains/index.md
+  - ./entities/index.md
+  - ./relationships/index.md
+  - ./measures/index.md
+  - ./glossary/index.md
 ---
 
 # Semantic Summary
@@ -25,27 +32,29 @@ source_documents:
 
 | Validation Check | Status | Details |
 | --- | --- | --- |
-| OSI Semantic Model readability | Pass | The OSI semantic model output was readable and structurally complete. |
+| OSI Semantic Model readability | Pass | `DI OSI Semantic Creator Agent Output.txt` was readable and contained the generated semantic summary and OSI semantic model content. |
 | Business Process document readability | Pass | `Cisco_Bookings_Data_Model_and_Process.docx` was readable. |
-| Required semantic sections present | Pass | Domains, entities, relationships, measures, glossary mapping, summary, metrics, and validation were present in the source model. |
+| Required semantic sections present | Pass | Domains, Entities, Relationships, Measures, Glossary Mapping, Validation, and Semantic Summary sections were present. |
 | Duplicate entities | Pass | No duplicate entities detected. |
 | Duplicate domains | Pass | No duplicate domains detected. |
-| Missing relationships | Pass | All seven explicit fact-to-dimension relationships are present. |
-| Validation warning | Warning | Two semantic associations are inferred rather than physically modeled: Customer Headquarters to Geography and Product to Contract Applicability. |
-| Validation warning | Warning | Source data rows are unavailable, so value-domain and empirical semantic validation cannot be performed. |
+| Missing relationships | Partial Pass | All explicit fact-to-dimension foreign-key relationships are present. Two additional semantic associations are inferred rather than physically implemented. |
 
-## Domain Summary
+## Semantic Domain Discovery
 
-- [Sales Bookings](domains/sales-bookings.md)
-- [Customer](domains/customer.md)
-- [Product](domains/product.md)
-- [Partner / Channel](domains/partner-channel.md)
-- [Geography](domains/geography.md)
-- [Sales Organization](domains/sales-organization.md)
-- [Contract](domains/contract.md)
-- [Time](domains/time.md)
+| Domain Name | Domain Description | Business Purpose |
+| --- | --- | --- |
+| Sales Bookings | Central booking transaction domain capturing commercial booking events and core measures at order-line grain. | Measure demand, bookings performance, renewal mix, and contract value. |
+| Customer | Customer account master context for segmentation and industry analysis. | Analyze bookings by account, segment, industry, and headquarters geography. |
+| Product | Product and offer master context across families and technology areas. | Analyze portfolio mix, offer types, and business entity performance. |
+| Partner / Channel | Partner and route-to-market context for indirect sales analysis. | Measure partner contribution and channel effectiveness. |
+| Geography | Sales geography hierarchy used for regional reporting. | Support analysis by region, theater, and country. |
+| Sales Organization | Sales ownership and coverage context. | Analyze bookings by sales representative, role, team, and segment coverage. |
+| Contract | Contract and entitlement context for support and subscription analysis. | Analyze term, coverage, renewal behavior, ACV, and TCV relationships. |
+| Time | Calendar and fiscal reporting context. | Enable time-based reporting and fiscal rollups. |
 
-## Entity Summary
+## Knowledge Extraction Summary
+
+### Business Entities
 
 - [Booking Transaction](entities/booking-transaction.md)
 - [Customer](entities/customer.md)
@@ -56,7 +65,16 @@ source_documents:
 - [Contract](entities/contract.md)
 - [Date](entities/date.md)
 
-## Relationship Summary
+### Measures
+
+- [Quantity Sold](measures/quantity-sold.md)
+- [Unit List Price USD](measures/unit-list-price-usd.md)
+- [Discount Percentage](measures/discount-percentage.md)
+- [Booking Amount USD](measures/booking-amount-usd.md)
+- [Annual Contract Value USD](measures/annual-contract-value-usd.md)
+- [Total Contract Value USD](measures/total-contract-value-usd.md)
+
+### Relationships
 
 - [Date to Booking Transaction](relationships/date-to-booking-transaction.md)
 - [Customer to Booking Transaction](relationships/customer-to-booking-transaction.md)
@@ -68,25 +86,19 @@ source_documents:
 - [Customer Headquarters to Geography](relationships/customer-headquarters-to-geography.md)
 - [Product to Contract Applicability](relationships/product-to-contract-applicability.md)
 
-## Measure Summary
+## Business Process Enrichment
 
-- [Quantity Sold](measures/quantity-sold.md)
-- [Unit List Price USD](measures/unit-list-price-usd.md)
-- [Discount Percentage](measures/discount-percentage.md)
-- [Booking Amount USD](measures/booking-amount-usd.md)
-- [Annual Contract Value USD](measures/annual-contract-value-usd.md)
-- [Total Contract Value USD](measures/total-contract-value-usd.md)
+The business process confirms that quote-to-booking begins with opportunity qualification, moves through configure-price-quote, deal registration, order placement, and booking recognition, then continues into fulfillment, contract creation, and renewal lifecycle. This process context enriches the semantic model by clarifying that:
 
-## Glossary Summary
+- bookings are recognized when Cisco accepts a valid order with committed value,
+- bookings are additive and measured at order-line grain,
+- ACV and TCV are especially relevant for subscription and SaaS offers,
+- renewal and channel analysis are first-class reporting use cases,
+- contract and entitlement context closes the renewal lifecycle loop back into the booking fact.
 
-See [Glossary Index](glossary/index.md) for all glossary concepts.
+## Validation Warnings
 
-## Knowledge Bundle Validation
-
-| Validation Check | Status | Details |
-| --- | --- | --- |
-| Missing concept documents | Pass | This bundle includes domain, entity, relationship, measure, and glossary indexes and concept documents. |
-| Missing YAML frontmatter | Pass | All generated documents include YAML frontmatter. |
-| Broken semantic links | Pass | All links in this bundle target generated documents. |
-| Duplicate concept documents | Pass | No duplicate concept documents generated. |
-| Missing references | Pass | Core semantic references are present across linked concepts. |
+- All tables have row count = 0, so empirical validation of values, coded domains, and measure behavior is not possible.
+- Table and column comments were not available in source metadata, so some business semantics remain inferred.
+- `business_entity`, `booking_type`, `is_renewal`, and `auto_renew_flag` have moderate inference in their business interpretation.
+- `Customer Headquarters to Geography` and `Product to Contract Applicability` are semantic associations inferred from naming and business process context, not explicit physical foreign keys.
