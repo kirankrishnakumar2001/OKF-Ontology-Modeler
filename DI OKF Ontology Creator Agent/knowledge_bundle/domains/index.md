@@ -1,9 +1,11 @@
 ---
 title: Domains Index
 concept_type: domain_index
+version: 1.0
+status: generated
 ---
 
-# Domains Index
+# Domains
 
 - [Sales Bookings](sales-bookings.md)
 - [Customer](customer.md)
