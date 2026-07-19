@@ -6,24 +6,20 @@ synonyms:
   - Team
   - Sales Organization
 related_entities:
-  - ../entities/sales-representative.md
+  - sales-representative
 ---
 
 # Sales Team
 
 ## Business Definition
-
 Organizational sales team to which the representative belongs.
 
 ## Technical Mapping
-
 `dim_sales_rep.sales_team`
 
 ## Synonyms
-
 - Team
 - Sales Organization
 
 ## Related Entities
-
 - [Sales Representative](../entities/sales-representative.md)
