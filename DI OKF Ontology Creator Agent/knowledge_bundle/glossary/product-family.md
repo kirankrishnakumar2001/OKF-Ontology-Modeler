@@ -6,24 +6,20 @@ synonyms:
   - Product Portfolio
   - Family
 related_entities:
-  - ../entities/product.md
+  - product
 ---
 
 # Product Family
 
 ## Business Definition
-
 Higher-level grouping of products into common families.
 
 ## Technical Mapping
-
 `dim_product.product_family`
 
 ## Synonyms
-
 - Product Portfolio
 - Family
 
 ## Related Entities
-
 - [Product](../entities/product.md)
