@@ -5,23 +5,19 @@ technical_mapping: dim_customer.hq_region
 synonyms:
   - HQ Region
 related_entities:
-  - ../entities/customer.md
+  - customer
 ---
 
 # Headquarters Region
 
 ## Business Definition
-
 Region where the customer headquarters is located.
 
 ## Technical Mapping
-
 `dim_customer.hq_region`
 
 ## Synonyms
-
 - HQ Region
 
 ## Related Entities
-
 - [Customer](../entities/customer.md)
