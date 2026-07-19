@@ -6,24 +6,20 @@ synonyms:
   - Offer Dimension
   - Product Master
 related_entities:
-  - ../entities/product.md
+  - product
 ---
 
 # Product Dimension
 
 ## Business Definition
-
-Product and offer master context across families and technology areas.
+Product dimension representing Cisco products, offers, product families, and technology domains.
 
 ## Technical Mapping
-
 `dim_product`
 
 ## Synonyms
-
 - Offer Dimension
 - Product Master
 
 ## Related Entities
-
 - [Product](../entities/product.md)
