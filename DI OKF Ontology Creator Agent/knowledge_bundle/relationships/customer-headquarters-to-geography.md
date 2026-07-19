@@ -1,31 +1,29 @@
 ---
 title: Customer Headquarters to Geography
 concept_type: relationship
-source_entity: ../entities/customer.md
-target_entity: ../entities/geography.md
-relationship_type: inferred semantic association
-cardinality: Many-to-One inferred
+source_entity: customer
+target_entity: geography
+relationship_type: inferred_semantic_association
+cardinality: many-to-one-inferred
 confidence_score: 0.55
 ---
 
 # Customer Headquarters to Geography
 
 ## Source Entity
-
 - [Customer](../entities/customer.md)
 
 ## Target Entity
-
 - [Geography](../entities/geography.md)
 
 ## Relationship Type
-
 Inferred semantic association
 
 ## Cardinality
-
-Many customers may align to one geography conceptually.
+Many Customers may align to one Geography conceptually
 
 ## Business Description
+This inferred relationship reflects the semantic alignment between customer headquarters fields and geography concepts. It is useful for contextual analysis but is not represented by a physical foreign key.
 
-This association is inferred from the customer attributes `hq_country` and `hq_region`. It provides contextual alignment between customer headquarters and geography reporting, but no explicit foreign key was modeled.
+## Technical Basis
+Based on `dim_customer.hq_country` and `dim_customer.hq_region` semantics only; no explicit foreign key is modeled.
