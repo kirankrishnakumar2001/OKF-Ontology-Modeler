@@ -1,9 +1,9 @@
 ---
 title: Glossary Index
-section: glossary
+concept_type: glossary_index
 ---
 
-# Glossary
+# Glossary Index
 
 - [Booking Transaction Fact](booking-transaction-fact.md)
 - [Booking Amount USD](booking-amount-usd.md)
