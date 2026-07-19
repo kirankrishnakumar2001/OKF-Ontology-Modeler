@@ -6,24 +6,20 @@ synonyms:
   - Discount Rate
   - Discount %
 related_entities:
-  - ../entities/booking-transaction.md
+  - booking-transaction
 ---
 
 # Discount Percentage
 
 ## Business Definition
-
 Percentage discount applied to the list price.
 
 ## Technical Mapping
-
 `fact_bookings.discount_pct`
 
 ## Synonyms
-
 - Discount Rate
 - Discount %
 
 ## Related Entities
-
 - [Booking Transaction](../entities/booking-transaction.md)
