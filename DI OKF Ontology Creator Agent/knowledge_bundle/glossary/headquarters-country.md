@@ -5,23 +5,19 @@ technical_mapping: dim_customer.hq_country
 synonyms:
   - HQ Country
 related_entities:
-  - ../entities/customer.md
+  - customer
 ---
 
 # Headquarters Country
 
 ## Business Definition
-
 Country where the customer headquarters is located.
 
 ## Technical Mapping
-
 `dim_customer.hq_country`
 
 ## Synonyms
-
 - HQ Country
 
 ## Related Entities
-
 - [Customer](../entities/customer.md)
