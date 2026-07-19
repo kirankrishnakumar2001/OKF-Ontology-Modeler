@@ -1,31 +1,28 @@
 ---
 title: Sales Representative to Booking Transaction
 concept_type: relationship
-source_entity: ../entities/sales-representative.md
-target_entity: ../entities/booking-transaction.md
-relationship_type: dimensional foreign key
-cardinality: One-to-Many
-confidence_score: 1.00
+source_entity: sales-representative
+target_entity: booking-transaction
+relationship_type: dimensional_foreign_key
+cardinality: one-to-many
 ---
 
 # Sales Representative to Booking Transaction
 
 ## Source Entity
-
 - [Sales Representative](../entities/sales-representative.md)
 
 ## Target Entity
-
 - [Booking Transaction](../entities/booking-transaction.md)
 
 ## Relationship Type
-
 Dimensional foreign key
 
 ## Cardinality
-
-One sales representative to many booking transactions.
+One Sales Representative to many Booking Transactions
 
 ## Business Description
+Each booking transaction is owned by a sales representative, supporting analysis by rep, role, team, and covered segment.
 
-Each booking transaction is assigned to a sales representative through `fact_bookings.sales_rep_key -> dim_sales_rep.sales_rep_key`, enabling sales ownership and team analysis.
+## Technical Basis
+`fact_bookings.sales_rep_key -> dim_sales_rep.sales_rep_key`
