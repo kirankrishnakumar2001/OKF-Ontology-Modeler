@@ -5,23 +5,19 @@ technical_mapping: fact_bookings.tcv_usd
 synonyms:
   - TCV
 related_entities:
-  - ../entities/booking-transaction.md
+  - booking-transaction
 ---
 
 # Total Contract Value USD
 
 ## Business Definition
-
-Total contract value in US dollars associated with the booking.
+Total contract value in US dollars associated with a booking.
 
 ## Technical Mapping
-
 `fact_bookings.tcv_usd`
 
 ## Synonyms
-
 - TCV
 
 ## Related Entities
-
 - [Booking Transaction](../entities/booking-transaction.md)
