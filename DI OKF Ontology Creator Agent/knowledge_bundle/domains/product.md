@@ -1,23 +1,18 @@
 ---
 title: Product
 concept_type: domain
+slug: product
 related_entities:
-  - ../entities/product.md
-related_measures: []
-related_relationships:
-  - ../relationships/product-to-booking-transaction.md
-  - ../relationships/product-to-contract-applicability.md
+  - product
 ---
 
 # Product
 
 ## Description
-
 Business domain describing Cisco products, offers, product families, technology domains, and business entities.
 
 ## Business Purpose
-
-This domain supports product portfolio analysis, offer analysis, technology segmentation, and business-entity reporting. It is used to understand product-family mix and product performance within bookings.
+Analyze portfolio mix, offer types, and business entity performance.
 
 ## Related Entities
 
@@ -25,7 +20,10 @@ This domain supports product portfolio analysis, offer analysis, technology segm
 
 ## Related Measures
 
-- None explicit in this domain.
+- [Booking Amount USD](../measures/booking-amount-usd.md)
+- [Annual Contract Value USD](../measures/annual-contract-value-usd.md)
+- [Total Contract Value USD](../measures/total-contract-value-usd.md)
+- [Quantity Sold](../measures/quantity-sold.md)
 
 ## Related Relationships
 
