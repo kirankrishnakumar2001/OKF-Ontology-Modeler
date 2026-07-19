@@ -1,25 +1,34 @@
 ---
 title: Sales Bookings
-concept_type: domain
-slug: sales-bookings
+concept_type: business_domain
+version: 1.0
+status: generated
 related_entities:
-  - booking-transaction
+  - ../entities/booking-transaction.md
 related_measures:
-  - quantity-sold
-  - unit-list-price-usd
-  - discount-percentage
-  - booking-amount-usd
-  - annual-contract-value-usd
-  - total-contract-value-usd
+  - ../measures/quantity-sold.md
+  - ../measures/unit-list-price-usd.md
+  - ../measures/discount-percentage.md
+  - ../measures/booking-amount-usd.md
+  - ../measures/annual-contract-value-usd.md
+  - ../measures/total-contract-value-usd.md
+related_relationships:
+  - ../relationships/date-to-booking-transaction.md
+  - ../relationships/customer-to-booking-transaction.md
+  - ../relationships/product-to-booking-transaction.md
+  - ../relationships/partner-to-booking-transaction.md
+  - ../relationships/geography-to-booking-transaction.md
+  - ../relationships/sales-representative-to-booking-transaction.md
+  - ../relationships/contract-to-booking-transaction.md
 ---
 
 # Sales Bookings
 
 ## Description
-Central transactional domain capturing booking events at order-line grain and the measures used for bookings analytics.
+Central booking transaction domain capturing commercial booking events and core measures at order-line grain.
 
 ## Business Purpose
-Measure demand, bookings performance, renewal mix, and contract value. This domain anchors the quote-to-booking process where a valid accepted order becomes a booking and is classified as New, Renewal, or Upsell.
+Measure demand, bookings performance, renewal mix, and contract value.
 
 ## Related Entities
 
