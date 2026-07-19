@@ -6,24 +6,20 @@ synonyms:
   - Salesperson Dimension
   - Rep Dimension
 related_entities:
-  - ../entities/sales-representative.md
+  - sales-representative
 ---
 
 # Sales Representative Dimension
 
 ## Business Definition
-
-Sales ownership and coverage context.
+Sales representative dimension representing sales ownership and coverage context.
 
 ## Technical Mapping
-
 `dim_sales_rep`
 
 ## Synonyms
-
 - Salesperson Dimension
 - Rep Dimension
 
 ## Related Entities
-
 - [Sales Representative](../entities/sales-representative.md)
