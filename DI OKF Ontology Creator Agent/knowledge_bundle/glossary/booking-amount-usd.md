@@ -6,24 +6,20 @@ synonyms:
   - Net Bookings USD
   - Total Booked Value
 related_entities:
-  - ../entities/booking-transaction.md
+  - booking-transaction
 ---
 
 # Booking Amount USD
 
 ## Business Definition
-
-Net booked monetary value in US dollars for the booking line.
+Net booked monetary value in US dollars for a booking line and the headline demand metric for total bookings.
 
 ## Technical Mapping
-
 `fact_bookings.booking_amount_usd`
 
 ## Synonyms
-
 - Net Bookings USD
 - Total Booked Value
 
 ## Related Entities
-
 - [Booking Transaction](../entities/booking-transaction.md)
