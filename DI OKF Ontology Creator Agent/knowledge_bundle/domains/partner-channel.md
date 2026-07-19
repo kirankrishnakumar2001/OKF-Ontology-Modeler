@@ -1,15 +1,19 @@
 ---
 title: Partner / Channel
-concept_type: domain
-slug: partner-channel
+concept_type: business_domain
+version: 1.0
+status: generated
 related_entities:
-  - partner
+  - ../entities/partner.md
+related_measures: []
+related_relationships:
+  - ../relationships/partner-to-booking-transaction.md
 ---
 
 # Partner / Channel
 
 ## Description
-Business domain describing partner organizations and route-to-market structures for indirect sales analysis.
+Partner and route-to-market context for indirect sales analysis.
 
 ## Business Purpose
 Measure partner contribution and channel effectiveness.
@@ -20,9 +24,7 @@ Measure partner contribution and channel effectiveness.
 
 ## Related Measures
 
-- [Booking Amount USD](../measures/booking-amount-usd.md)
-- [Quantity Sold](../measures/quantity-sold.md)
-- [Discount Percentage](../measures/discount-percentage.md)
+No domain-specific base measures are defined directly in this dimension domain.
 
 ## Related Relationships
 
