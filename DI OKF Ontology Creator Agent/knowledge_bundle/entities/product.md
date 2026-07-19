@@ -1,34 +1,31 @@
 ---
 title: Product
 concept_type: entity
+business_domain: product
 technical_mapping: dim_product
-domain: ../domains/product.md
-relationships:
-  - ../relationships/product-to-booking-transaction.md
-  - ../relationships/product-to-contract-applicability.md
+keys:
+  primary_key: product_key
+  business_key: product_id
 ---
 
 # Product
 
 ## Business Definition
-
-Product or offer entity representing Cisco products, subscriptions, and commercial offers across product families and technology domains.
+Product dimension representing Cisco products, subscriptions, and offers across portfolio and technology domains.
 
 ## Technical Mapping
-
 - Table: `dim_product`
-- Entity Type: Dimension
 - Primary Key: `product_key`
 - Business Key: `product_id`
 
 ## Attributes
 
-| Attribute | Technical Column | Business Meaning |
+| Attribute | Technical Column | Definition |
 | --- | --- | --- |
-| Product Key | `product_key` | Surrogate key uniquely identifying a product record. |
+| Product Key | `product_key` | Surrogate key that uniquely identifies a product record in the dimension. |
 | Product ID | `product_id` | Business identifier assigned to a product, SKU, or offer. |
-| Product Name | `product_name` | Human-readable product or offer name. |
-| Product Family | `product_family` | Higher-level grouping of products into families. |
+| Product Name | `product_name` | Human-readable name of the Cisco product or offer. |
+| Product Family | `product_family` | Higher-level grouping of products into common families. |
 | Technology Domain | `technology_domain` | Technology area to which the product belongs. |
 | Offer Type | `offer_type` | Commercial offer category for the product. |
 | Business Entity | `business_entity` | Internal Cisco business unit or portfolio entity associated with the product. |
@@ -40,7 +37,7 @@ Product or offer entity representing Cisco products, subscriptions, and commerci
 
 ## Measures
 
-- None explicit.
+This entity does not contain explicit stored measures. It contextualizes [Booking Amount USD](../measures/booking-amount-usd.md), [Annual Contract Value USD](../measures/annual-contract-value-usd.md), and [Total Contract Value USD](../measures/total-contract-value-usd.md).
 
 ## Relationships
 
@@ -49,6 +46,6 @@ Product or offer entity representing Cisco products, subscriptions, and commerci
 
 ## Related Concepts
 
-- Domain: [Product](../domains/product.md)
-- Related fact entity: [Booking Transaction](booking-transaction.md)
-- Related contract context: [Contract](contract.md)
+- [Product Domain](../domains/product.md)
+- [Booking Transaction](booking-transaction.md)
+- [Contract](contract.md)
