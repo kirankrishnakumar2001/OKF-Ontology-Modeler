@@ -6,24 +6,20 @@ synonyms:
   - Geo Dimension
   - Sales Geography
 related_entities:
-  - ../entities/geography.md
+  - geography
 ---
 
 # Geography Dimension
 
 ## Business Definition
-
-Sales geography hierarchy used for regional reporting.
+Geography dimension representing the sales geography hierarchy across region, theater, and country.
 
 ## Technical Mapping
-
 `dim_geography`
 
 ## Synonyms
-
 - Geo Dimension
 - Sales Geography
 
 ## Related Entities
-
 - [Geography](../entities/geography.md)
