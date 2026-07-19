@@ -1,15 +1,20 @@
 ---
 title: Geography
-concept_type: domain
-slug: geography
+concept_type: business_domain
+version: 1.0
+status: generated
 related_entities:
-  - geography
+  - ../entities/geography.md
+related_measures: []
+related_relationships:
+  - ../relationships/geography-to-booking-transaction.md
+  - ../relationships/customer-headquarters-to-geography.md
 ---
 
 # Geography
 
 ## Description
-Business domain describing sales geography hierarchy across region, theater, and country.
+Sales geography hierarchy used for regional reporting.
 
 ## Business Purpose
 Support analysis by region, theater, and country.
@@ -20,9 +25,7 @@ Support analysis by region, theater, and country.
 
 ## Related Measures
 
-- [Booking Amount USD](../measures/booking-amount-usd.md)
-- [Quantity Sold](../measures/quantity-sold.md)
-- [Annual Contract Value USD](../measures/annual-contract-value-usd.md)
+No domain-specific base measures are defined directly in this dimension domain.
 
 ## Related Relationships
 
