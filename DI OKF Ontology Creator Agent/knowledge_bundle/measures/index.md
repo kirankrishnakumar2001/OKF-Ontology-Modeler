@@ -1,9 +1,9 @@
 ---
-title: Measure Index
-section: measures
+title: Measures Index
+concept_type: measure_index
 ---
 
-# Measures
+# Measures Index
 
 - [Quantity Sold](quantity-sold.md)
 - [Unit List Price USD](unit-list-price-usd.md)
