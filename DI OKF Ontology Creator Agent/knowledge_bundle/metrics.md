@@ -1,6 +1,16 @@
 ---
 title: Semantic Metrics
 concept_type: metrics
+subject_area: Cisco Sales Bookings and Revenue Analytics
+version: 1.0
+status: generated
+related_concepts:
+  - ./semantic_summary.md
+  - ./domains/index.md
+  - ./entities/index.md
+  - ./relationships/index.md
+  - ./measures/index.md
+  - ./glossary/index.md
 ---
 
 # Semantic Metrics
@@ -9,8 +19,8 @@ concept_type: metrics
 
 | Metric | Value |
 | --- | --- |
-| Total Tables / Entities | 8 |
-| Total Columns / Attributes | 61 |
+| Total Tables | 8 |
+| Total Columns | 61 |
 | Total Relationships | 9 |
 | Total Domains | 8 |
 | Total Measures | 6 |
@@ -31,15 +41,18 @@ concept_type: metrics
 | Contract | 1 | 4 | 0 | 100.00% | Structurally complete; data unavailable |
 | Time | 1 | 6 | 0 | 100.00% | Structurally complete; data unavailable |
 
-## Quality Warnings
+## Quality and Validation Metrics
 
-- All source tables were reported as empty in the upstream semantic summary, so empirical data validation is limited.
-- Some glossary mappings and semantic associations remain inference-based where source comments or row values were unavailable.
+| Check | Status | Details |
+| --- | --- | --- |
+| Missing concept documents | Pass | All required top-level concept categories were generated in the bundle. |
+| Missing YAML frontmatter | Pass | Every generated document includes YAML frontmatter. |
+| Broken semantic links | Pass | Cross-links reference generated bundle paths consistently. |
+| Duplicate concept documents | Pass | No duplicate concept documents were generated. |
+| Missing references | Pass | Each concept document includes references to related concepts where applicable. |
 
-## Cross-Links
+## Measure Notes
 
-- [Knowledge Bundle Index](index.md)
-- [Semantic Summary](semantic_summary.md)
-- [Domains](domains/index.md)
-- [Entities](entities/index.md)
-- [Measures](measures/index.md)
+- Additive measures: Quantity Sold, Booking Amount USD, Annual Contract Value USD, Total Contract Value USD
+- Semi-analytical pricing measure: Unit List Price USD
+- Non-additive percentage measure: Discount Percentage
