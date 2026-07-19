@@ -6,24 +6,20 @@ synonyms:
   - Salesperson Name
   - Account Executive Name
 related_entities:
-  - ../entities/sales-representative.md
+  - sales-representative
 ---
 
 # Sales Representative Name
 
 ## Business Definition
-
 Name of the sales representative associated with the booking.
 
 ## Technical Mapping
-
 `dim_sales_rep.rep_name`
 
 ## Synonyms
-
 - Salesperson Name
 - Account Executive Name
 
 ## Related Entities
-
 - [Sales Representative](../entities/sales-representative.md)
